@@ -3,35 +3,38 @@
 Ниже представлена диаграмма, визуализирующая границы системы и основные сценарии взаимодействия конечных пользователей с приложением `AI Document Indexer`:
 
 ```mermaid
-architecture-beta
-    %% Use Case диаграммы в Mermaid строятся через универсальный граф, чтобы GitHub гарантированно их отображал
-    graph LR
-        %% Определение акторов (пользователей)
-        User1[Архивист / Сотрудник архива]
-        User2[Исследователь родословной]
+graph LR
+    %% Акторы
+    A1[Архивист / Сотрудник архива]
+    A2[Исследователь родословной]
 
-        subgraph System [Веб-приложение AI Document Indexer]
-            UC1(Выбрать папку с архивными файлами)
-            UC2(Указать языковой профиль документа)
-            UC3(Запустить конвейер ИИ-обработки)
-            UC4(Контролировать прогресс обработки)
-            UC5(Просмотреть сформированный классификатор)
-        end
+    %% Варианты использования (Функции системы)
+    UC1(Выбрать папку с архивными файлами)
+    UC2(Указать языковой профиль документа)
+    UC3(Запустить конвейер ИИ-обработки)
+    UC4(Контролировать прогресс обработки)
+    UC5(Просмотреть сформированный классификатор)
 
-        %% Связи акторов с вариантами использования
-        User1 --> UC1
-        User1 --> UC2
-        User1 --> UC3
-        User1 --> UC4
-        User1 --> UC5
+    %% Связи для Первого Актора
+    A1 --> UC1
+    A1 --> UC2
+    A1 --> UC3
+    A1 --> UC4
+    A1 --> UC5
 
-        User2 --> UC1
-        User2 --> UC2
-        User2 --> UC3
-        User2 --> UC4
-        User2 --> UC5
+    %% Связи для Второго Актора
+    A2 --> UC1
+    A2 --> UC2
+    A2 --> UC3
+    A2 --> UC4
+    A2 --> UC5
 
-    %% Стилизация для лоска
-    style System fill:#fafafa,stroke:#333,stroke-width:1px
+    %% Стилизация элементов
+    style A1 fill:#e1f5fe,stroke:#0288d1,stroke-width:1px
+    style A2 fill:#e1f5fe,stroke:#0288d1,stroke-width:1px
+    style UC1 fill:#fafafa,stroke:#333,stroke-width:1px
+    style UC2 fill:#fafafa,stroke:#333,stroke-width:1px
+    style UC3 fill:#fafafa,stroke:#333,stroke-width:1px
+    style UC4 fill:#fafafa,stroke:#333,stroke-width:1px
+    style UC5 fill:#fafafa,stroke:#333,stroke-width:1px
 ```
-
