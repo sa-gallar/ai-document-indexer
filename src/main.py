@@ -4,7 +4,7 @@ from pathlib import Path
 from scanner import ArchivalDocumentScanner
 from gemini_client import GeminiArchivalParser
 
-# Настройка логирования
+# Настройка логирования 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class ArchivalPipelineApp:
